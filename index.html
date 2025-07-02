@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="box-lkolsh">
+            <h1>Enter Your link</h1>
+            <input type="text" placeholder="Enter Your Link" id="text">
+            <br>
+            <button onclick="geberateQRCode()">Generator</button>
+            <br>
+            <div>
+                <img id="qrCode" alt="Qr Code">
+                <br>
+                <button onclick="downloadQR()" class="button2">downloadQR</button>
+            </div>
+            <br>
+        </div>
+    </div>
+    <script>
+        function geberateQRCode(){
+            const text = document.getElementById('text').value
+            const res = `http://api.qrserver.com/v1/create-qr-code/?data=[URL-encoded-text]${text}&size=100*100`;
+            const imgeSrc = res;
+            const img = document.getElementById('qrCode');
+            img.src = imgeSrc;
+        }
+        function downloadQR() {
+            const img = document.getElementById('qrCode');
+            const link = document.createElement('a');
+            link.href = img.src;
+            link.download = 'QRCode.png';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>

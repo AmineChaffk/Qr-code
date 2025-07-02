@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+/*
+Bash njib box center
+*/
+.box{
+    background-color: white;
+    width: 400px;
+    height: 600px;
+}
+/*
+Bash njib kolshi li fi box lyi center
+*/
+.box-lkolsh{
+    display: block;
+    text-align: center;
+    margin-top: 50px;
+}
+/*
+style lyi input
+*/
+.box-lkolsh input{
+    margin-top: 10px;
+    width: 300px;
+    height: 50px;
+}
+/*
+style lyi input
+*/
+button{
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    background-color:rgb(72, 255, 0);
+    border: 0px white solid;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 30px;
+}
+/*
+style lyi button
+*/
+button:hover{
+    background-color: rgb(47, 165, 0);
+    transition: 0.2s ease-in-out;
+}
+.button2{
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(72, 255, 0);
+    border: 0px white solid;
+    border-radius: 12px;
+    color: white;
+    margin-bottom: 30px;
+}
+.button2:hover{
+    background-color: rgb(47, 165, 0);
+}
